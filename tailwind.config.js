@@ -11,7 +11,7 @@ module.exports = {
         alpha: '#D6EFED',
         beta: '#B7D3DF',
         gamma: '#C9BBCF',
-        psi: '#898AA6',
+        psi: '#191A16',
         omega: '#898AA6',
       },
     },
