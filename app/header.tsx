@@ -41,9 +41,9 @@ export { mainImage };
 const LeftSideNav = () => {
   return (
     <div className='text-alpha text-lg flex flex-col gap-4 self-end [&>*]:cursor-pointer '>
-      <FiLinkedin className='hover:fill-alpha' />
-      <FiFacebook className='hover:fill-alpha' />
-      <FiTwitter className='hover:fill-alpha' />
+      <FiLinkedin className='hover:fill-alpha duration-100 ease-out hover:scale-150 transition-all' />
+      <FiFacebook className='hover:fill-alpha duration-100 ease-out hover:scale-150 transition-all' />
+      <FiTwitter className='hover:fill-alpha duration-100 ease-out hover:scale-150 transition-all' />
     </div>
   );
 };
@@ -51,10 +51,10 @@ const LeftSideNav = () => {
 const RightSideNav = () => {
   return (
     <div
-      className='text-alpha text-xs self-end tracking-widest cursor-pointer'
+      className='text-alpha text-xs self-end tracking-widest cursor-pointer hover:-translate-y-10 duration-500 w-10 flex items-center'
       style={{ writingMode: 'vertical-lr' }}
     >
-      Scroll Down
+      <p>Scroll Down</p>
     </div>
   );
 };
