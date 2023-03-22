@@ -20,15 +20,18 @@ export default function Header() {
         <Button>Download CV</Button>
         <Button fill>Lets Talk</Button>
       </div>
-      <LeftSideNav />
-      <div className='w-max mx-auto bg-gradient-to-b from-beta to-psi  rounded-t-full pt-16 px-5 mt-5'>
-        <Image
-          src={mainImage}
-          width='250'
-          alt='main image of raju'
-          className=''
-        />
-      </div>
+      <section className='grid grid-cols-5 place-items-center'>
+        <LeftSideNav />
+        <div className='w-max mx-auto bg-gradient-to-b from-beta to-psi  rounded-t-full pt-16 px-5 mt-5 col-span-3'>
+          <Image
+            src={mainImage}
+            width='250'
+            alt='main image of raju'
+            className=''
+          />
+        </div>
+        <RightSideNav />
+      </section>
     </section>
   );
 }
@@ -37,10 +40,21 @@ export { mainImage };
 
 const LeftSideNav = () => {
   return (
-    <div className='text-alpha text-lg flex flex-col gap-4'>
-      <FiLinkedin />
-      <FiFacebook />
-      <FiTwitter />
+    <div className='text-alpha text-lg flex flex-col gap-4 self-end [&>*]:cursor-pointer '>
+      <FiLinkedin className='hover:fill-alpha' />
+      <FiFacebook className='hover:fill-alpha' />
+      <FiTwitter className='hover:fill-alpha' />
+    </div>
+  );
+};
+
+const RightSideNav = () => {
+  return (
+    <div
+      className='text-alpha text-xs self-end tracking-widest cursor-pointer'
+      style={{ writingMode: 'vertical-lr' }}
+    >
+      Scroll Down
     </div>
   );
 };
