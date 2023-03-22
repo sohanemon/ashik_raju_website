@@ -41,9 +41,9 @@ export { mainImage };
 const LeftSideNav = () => {
   return (
     <div className='text-alpha text-lg flex flex-col gap-4 self-end [&>*]:cursor-pointer '>
-      <FiLinkedin className='hover:fill-alpha duration-100 ease-out hover:scale-150 transition-all' />
-      <FiFacebook className='hover:fill-alpha duration-100 ease-out hover:scale-150 transition-all' />
-      <FiTwitter className='hover:fill-alpha duration-100 ease-out hover:scale-150 transition-all' />
+      <FiLinkedin className='hover:fill-alpha duration-300 ease-out hover:scale-150 transition-all' />
+      <FiFacebook className='hover:fill-alpha duration-300 ease-out hover:scale-150 transition-all' />
+      <FiTwitter className='hover:fill-alpha duration-300 ease-out hover:scale-150 transition-all' />
     </div>
   );
 };
