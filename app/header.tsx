@@ -16,8 +16,13 @@ export default function Header() {
         <Button>Download CV</Button>
         <Button fill>Lets Talk</Button>
       </div>
-      <div>
-        <Image src={mainImage} placeholder='blur' alt='main image of raju' />
+      <div className='w-max mx-auto bg-gradient-to-b from-beta to-psi  rounded-t-full pt-16 px-5 mt-5'>
+        <Image
+          src={mainImage}
+          width='250'
+          alt='main image of raju'
+          className=''
+        />
       </div>
     </section>
   );
