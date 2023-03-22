@@ -11,8 +11,9 @@ export default function Header() {
   return (
     <section className='my-10'>
       <BoldText>Hi, its</BoldText>
+
       <Title>
-        <h1 className='text-4xl text-white'>Ashik Raju</h1>
+        <p className='text-4xl text-white mt-2 mb-1'>Ashik Raju</p>
       </Title>
 
       <p className='text-center text-gray-400 text-sm'>Marketing Expert</p>
