@@ -3,6 +3,10 @@ import Button from '@/components/button';
 import Title from '@/components/title';
 import Image from 'next/image';
 import mainImage from '@/assets/images/raju_main.png';
+
+/* ------------------------------- icons ------------------------------- */
+import { FiLinkedin, FiFacebook, FiTwitter } from 'react-icons/fi';
+/* --------------------------------------------------------------------- */
 export default function Header() {
   return (
     <section className='my-10'>
@@ -16,6 +20,7 @@ export default function Header() {
         <Button>Download CV</Button>
         <Button fill>Lets Talk</Button>
       </div>
+      <LeftSideNav />
       <div className='w-max mx-auto bg-gradient-to-b from-beta to-psi  rounded-t-full pt-16 px-5 mt-5'>
         <Image
           src={mainImage}
@@ -29,3 +34,13 @@ export default function Header() {
 }
 
 export { mainImage };
+
+const LeftSideNav = () => {
+  return (
+    <div className='text-alpha text-lg flex flex-col gap-4'>
+      <FiLinkedin />
+      <FiFacebook />
+      <FiTwitter />
+    </div>
+  );
+};
