@@ -2,7 +2,6 @@ import BoldText from '@/components/bold-text';
 import Button from '@/components/button';
 import Title from '@/components/title';
 import Image from 'next/image';
-import mainImage from '@/assets/images/raju_main.png';
 
 /* ------------------------------- icons ------------------------------- */
 import { FiLinkedin, FiFacebook, FiTwitter } from 'react-icons/fi';
@@ -25,7 +24,8 @@ export default function Header() {
         <LeftSideNav />
         <div className='w-max mx-auto bg-gradient-to-b from-beta to-psi  rounded-t-full pt-16 px-5 mt-5 col-span-3'>
           <Image
-            src={mainImage}
+            src='/images/raju_main.png'
+            height={500}
             width='250'
             alt='main image of raju'
             className=''
@@ -36,8 +36,6 @@ export default function Header() {
     </section>
   );
 }
-
-export { mainImage };
 
 const LeftSideNav = () => {
   return (
