@@ -15,8 +15,10 @@ export default function About() {
           <div
             id='image-holder'
             style={{ backgroundImage: 'url("/images/raju_main.png")' }}
-            className='rounded-xl px-6 pt-10 w-96 h-96 bg-cover '
-          />
+            className='rounded-xl px-6 pt-10 w-96 h-96 bg-cover after:bg-omega after:rounded-xl'
+          >
+            <div className='absolute bg-gradient-to-tr to-alpha from-alpha inset-0 -z-10 rounded-xl -rotate-12' />
+          </div>
         </div>
       </section>
 
@@ -34,6 +36,10 @@ export default function About() {
             z-index: -1;
           }
           #image-holder::after {
+            position: absolute;
+            content: '';
+            inset: 0;
+            z-index: -2;
           }
         `}
       </style>
