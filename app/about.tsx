@@ -5,10 +5,9 @@ import Title from '@/components/title';
 /* ------------------------------- icons ------------------------------- */
 import {
   BsFillCalendarCheckFill,
-  BsFolder2Open,
+  BsFillFolderFill,
   BsPeopleFill,
 } from 'react-icons/bs';
-import { IconType } from 'react-icons';
 /* --------------------------------------------------------------------- */
 export default function About() {
   return (
@@ -29,6 +28,18 @@ export default function About() {
             <div className='absolute bg-gradient-to-tr to-alpha from-alpha inset-0 -z-10 rounded-xl -rotate-12' />
           </div>
           {/* #TODO: details section */}
+          <div className='grid grid-cols-3 gap-6 '>
+            {details?.map((e) => (
+              <div
+                key={e.title}
+                className='flex flex-col items-center bg-omega h-max p-5 rounded-lg shadow shadow-omega'
+              >
+                {e.icon}
+                <p className='text-alpha font-semibold text-lg'>{e.title}</p>
+                <p className='text-beta text-xs'>{e.text}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -57,19 +68,23 @@ export default function About() {
   );
 }
 
-const details: { icon: IconType; title: string; text: string }[] = [
+const details: {
+  icon: React.ReactNode;
+  title: string;
+  text: string;
+}[] = [
   {
-    icon: BsFillCalendarCheckFill,
+    icon: <BsFillCalendarCheckFill className='text-alpha  text-2xl' />,
     title: 'Experience',
     text: '1+ yrs of experience',
   },
   {
-    icon: BsPeopleFill,
+    icon: <BsPeopleFill className='text-alpha  text-2xl' />,
     title: 'Clients',
     text: '100+ clients',
   },
   {
-    icon: BsFolder2Open,
+    icon: <BsFillFolderFill className='text-alpha  text-2xl' />,
     title: 'Project',
     text: '100+ projects done',
   },
