@@ -1,6 +1,11 @@
 'use client';
 import BoldText from '../components/bold-text';
 import Title from '@/components/title';
+
+/* ------------------------------- icons ------------------------------- */
+import { BsFillCalendarCheckFill } from 'react-icons/bs';
+import { IconType } from 'react-icons';
+/* --------------------------------------------------------------------- */
 export default function About() {
   return (
     <>
@@ -11,7 +16,7 @@ export default function About() {
           <p className='text-4xl text-white mt-2 mb-1'>About me</p>
         </Title>
 
-        <div className=''>
+        <div className='grid grid-cols-2 w-4/5 mx-auto'>
           <div
             id='image-holder'
             style={{ backgroundImage: 'url("/images/raju_main.png")' }}
@@ -19,6 +24,7 @@ export default function About() {
           >
             <div className='absolute bg-gradient-to-tr to-alpha from-alpha inset-0 -z-10 rounded-xl -rotate-12' />
           </div>
+          {/* #TODO: details section */}
         </div>
       </section>
 
@@ -46,3 +52,11 @@ export default function About() {
     </>
   );
 }
+
+const details: { icon: IconType; title: string; text: string }[] = [
+  {
+    icon: BsFillCalendarCheckFill,
+    title: 'Experience',
+    text: '1+ yrs of experience',
+  },
+];
