@@ -3,7 +3,11 @@ import BoldText from '../components/bold-text';
 import Title from '@/components/title';
 
 /* ------------------------------- icons ------------------------------- */
-import { BsFillCalendarCheckFill } from 'react-icons/bs';
+import {
+  BsFillCalendarCheckFill,
+  BsFolder2Open,
+  BsPeopleFill,
+} from 'react-icons/bs';
 import { IconType } from 'react-icons';
 /* --------------------------------------------------------------------- */
 export default function About() {
@@ -58,5 +62,15 @@ const details: { icon: IconType; title: string; text: string }[] = [
     icon: BsFillCalendarCheckFill,
     title: 'Experience',
     text: '1+ yrs of experience',
+  },
+  {
+    icon: BsPeopleFill,
+    title: 'Clients',
+    text: '100+ clients',
+  },
+  {
+    icon: BsFolder2Open,
+    title: 'Project',
+    text: '100+ projects done',
   },
 ];
