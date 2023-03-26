@@ -2,6 +2,7 @@ import './globals.css';
 import { Poppins } from 'next/font/google';
 
 const poppins = Poppins({ weight: '400', subsets: ['latin'] });
+import bg from '@/assets/bg.svg';
 
 export const metadata = {
   title: 'Ashik Raju',
@@ -15,7 +16,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={`bg-psi ${poppins.className}`}>{children}</body>
+      <body
+        style={{ backgroundImage: 'url("/bg.svg")' }}
+        className={` ${poppins.className} bg-fixed`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
