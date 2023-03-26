@@ -1,14 +1,15 @@
 'use client';
-import BoldText from '../components/bold-text';
 import Title from '@/components/title';
+import BoldText from '../components/bold-text';
 
 /* ------------------------------- icons ------------------------------- */
+import Button from '@/components/button';
 import {
   BsFillCalendarCheckFill,
   BsFillFolderFill,
   BsPeopleFill,
 } from 'react-icons/bs';
-import Button from '@/components/button';
+import { Details } from '@/global';
 /* --------------------------------------------------------------------- */
 export default function About() {
   return (
@@ -81,11 +82,7 @@ export default function About() {
   );
 }
 
-const details: {
-  icon: React.ReactNode;
-  title: string;
-  text: string;
-}[] = [
+const details: Details[] = [
   {
     icon: <BsFillCalendarCheckFill className='text-psi text-2xl' />,
     title: 'Experience',
