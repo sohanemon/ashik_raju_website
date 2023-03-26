@@ -15,7 +15,7 @@ export default function Skills() {
 
         <section>
           {/* #note: skills container */}
-          <div className='grid grid-cols-2 w-4/5 mx-auto gap-10'>
+          <div className='grid grid-cols-2 w-4/5 mx-auto gap-10 mt-10'>
             {skills?.map((e) => (
               <div key={e.title} className='bg-omega p-7  rounded-3xl'>
                 <h1 className='text-xl text-psi text-center mb-4 '>
