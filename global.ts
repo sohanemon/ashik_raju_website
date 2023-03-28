@@ -16,3 +16,10 @@ export type SkillSet = {
   title: string;
   skills: Skill[];
 };
+
+export type ContactInfo = {
+  icon: React.ReactNode;
+  platform: string;
+  handler: string;
+  link: () => string;
+};
