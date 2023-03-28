@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang='en'>
       <body
         style={{ backgroundImage: 'url("/bg.svg")' }}
-        className={` ${poppins.className} bg-fixed`}
+        className={` ${poppins.className} bg-fixed vsc-initialized`}
       >
         {children}
       </body>

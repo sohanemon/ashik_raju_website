@@ -25,7 +25,7 @@ export default function Header() {
         <div className='w-max mx-auto bg-gradient-to-b from-beta to-psi  rounded-t-full pt-16 px-5 mt-5 col-span-3'>
           <Image
             src='/images/raju_main.png'
-            height={500}
+            height='500'
             width='250'
             alt='main image of raju'
             className=''
