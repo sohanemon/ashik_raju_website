@@ -2,10 +2,9 @@ import BoldText from '@/components/bold-text';
 import Title from '@/components/title';
 import { ContactInfo } from '@/global';
 import { MdEmail } from 'react-icons/md';
+import { FaFacebookMessenger } from 'react-icons/fa';
 
 export default function Contact() {
-  console.log(contactInfo[0].link());
-  // console.log('lolllllllllllllllllll');
   return (
     <>
       <section className='min-h-screen'>
@@ -26,6 +25,22 @@ export default function Contact() {
 }
 
 const contactInfo: ContactInfo[] = [
+  {
+    icon: <MdEmail />,
+    platform: 'Email',
+    handler: 'raju@gmail.com',
+    link: function () {
+      return `mailto://${this.handler}`;
+    },
+  },
+  {
+    icon: <FaFacebookMessenger />,
+    platform: 'Messenger',
+    handler: 'raju',
+    link: function () {
+      return `https://facebook.com/${this.handler}`;
+    },
+  },
   {
     icon: <MdEmail />,
     platform: 'Email',
