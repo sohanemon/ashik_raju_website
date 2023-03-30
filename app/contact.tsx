@@ -16,7 +16,13 @@ export default function Contact() {
         <div className='grid grid-cols-5'>
           {/* main section */}
 
-          <div className='col-span-2'>{/* left side div */}</div>
+          <div className='col-span-2'>
+            {/* left side div */}
+
+            {contactInfo.map((e) => (
+              <div key={e.link()}>{e.icon('text-7xl')}</div>
+            ))}
+          </div>
           <div className='col-span-3'>{/* right side div */}</div>
         </div>
       </section>
@@ -26,7 +32,7 @@ export default function Contact() {
 
 const contactInfo: ContactInfo[] = [
   {
-    icon: <MdEmail />,
+    icon: (className) => <MdEmail className={className} />,
     platform: 'Email',
     handler: 'raju@gmail.com',
     link: function () {
@@ -34,7 +40,7 @@ const contactInfo: ContactInfo[] = [
     },
   },
   {
-    icon: <FaFacebookMessenger />,
+    icon: (className) => <FaFacebookMessenger className={className} />,
     platform: 'Messenger',
     handler: 'raju',
     link: function () {
@@ -42,7 +48,7 @@ const contactInfo: ContactInfo[] = [
     },
   },
   {
-    icon: <MdEmail />,
+    icon: (className) => <MdEmail className={className} />,
     platform: 'Email',
     handler: 'raju@gmail.com',
     link: function () {
