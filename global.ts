@@ -18,7 +18,7 @@ export type SkillSet = {
 };
 
 export type ContactInfo = {
-  icon: React.ReactNode;
+  icon: (className: string) => React.ReactNode;
   platform: string;
   handler: string;
   link: () => string;
