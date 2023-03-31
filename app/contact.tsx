@@ -3,6 +3,7 @@ import Title from '@/components/title';
 import { ContactInfo } from '@/global';
 import { MdEmail } from 'react-icons/md';
 import { FaFacebookMessenger } from 'react-icons/fa';
+import { BsLinkedin } from 'react-icons/bs';
 
 export default function Contact() {
   return (
@@ -13,17 +14,23 @@ export default function Contact() {
         <Title>
           <p className='text-4xl text-white mt-2 mb-1'>Contact me</p>
         </Title>
-        <div className='grid grid-cols-5'>
+        <div className='grid grid-cols-7 w-3/5 mx-auto'>
           {/* main section */}
 
           <div className='col-span-2'>
             {/* left side div */}
 
             {contactInfo.map((e) => (
-              <div key={e.link()}>{e.icon('text-7xl')}</div>
+              <div className='bg-alpha' key={e.link()}>
+                <a href={e.link()}>
+                  {e.icon('text-3xl')}
+                  <p>{e.platform}</p>
+                  <p>{e.handler}</p>
+                </a>
+              </div>
             ))}
           </div>
-          <div className='col-span-3'>{/* right side div */}</div>
+          <div className='col-span-5'>{/* right side div */}</div>
         </div>
       </section>
     </>
@@ -48,8 +55,8 @@ const contactInfo: ContactInfo[] = [
     },
   },
   {
-    icon: (className) => <MdEmail className={className} />,
-    platform: 'Email',
+    icon: (className) => <BsLinkedin className={className} />,
+    platform: 'LinkedIN',
     handler: 'raju@gmail.com',
     link: function () {
       return `mailto://${this.handler}`;
