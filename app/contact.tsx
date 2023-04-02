@@ -17,15 +17,15 @@ export default function Contact() {
         <div className='grid grid-cols-7 w-3/5 mx-auto'>
           {/* main section */}
 
-          <div className='col-span-2'>
+          <div className='col-span-2 flex flex-col gap-3 w-max '>
             {/* left side div */}
 
             {contactInfo.map((e) => (
-              <div className='bg-alpha' key={e.link()}>
-                <a href={e.link()}>
+              <div className='bg-alpha rounded' key={e.link()}>
+                <a href={e.link()} className='flex flex-col items-center p-6'>
                   {e.icon('text-3xl')}
-                  <p>{e.platform}</p>
-                  <p>{e.handler}</p>
+                  <p className='font-semibold'>{e.platform}</p>
+                  <p className='text-xs mt-1'>{e.handler}</p>
                 </a>
               </div>
             ))}
