@@ -4,6 +4,7 @@ import { ContactInfo } from '@/global';
 import { MdEmail } from 'react-icons/md';
 import { FaFacebookMessenger } from 'react-icons/fa';
 import { BsLinkedin } from 'react-icons/bs';
+import Form from '@/components/form';
 
 export default function Contact() {
   return (
@@ -30,7 +31,10 @@ export default function Contact() {
               </div>
             ))}
           </div>
-          <div className='col-span-5'>{/* right side div */}</div>
+          <div className='col-span-5'>
+            {/* right side div */}
+            <Form />
+          </div>
         </div>
       </section>
     </>
