@@ -6,7 +6,7 @@ export default function Form() {
       <div className='relative '>
         <div className='relative  text-gray-500 '>
           <div className='m-auto space-y-8 '>
-            <div className='rounded-3xl border border-gray-100 bg-alpha shadow-2xl shadow-gray-600/10 backdrop-blur-2xl'>
+            <div className='rounded-xl border border-gray-100 bg-alpha shadow-2xl shadow-gray-600/10 backdrop-blur-2xl'>
               <div className='p-8 py-12 sm:p-16'>
                 <form action='' className='space-y-8'>
                   <div className='space-y-2'>
