@@ -19,7 +19,7 @@ export default function UiBtn() {
             </svg>
           </div>
         </div>
-        <span className='py-2 font-semibold '>Send</span>
+        <span className=' font-semibold '>Send</span>
       </button>
     </>
   );
