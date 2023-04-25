@@ -1,10 +1,10 @@
-import './ui-btn.css';
+import btn from './ui-btn.module.css';
 export default function UiBtn() {
   return (
     <>
-      <button className='ml-auto w-max pl-2 pr-5'>
-        <div className='svg-wrapper-1'>
-          <div className='svg-wrapper'>
+      <button className={`ml-auto w-max pl-2 pr-5 ${btn.uibtn}`}>
+        <div className={`${btn.svgWrapper1}`}>
+          <div className={btn.svgWrapper}>
             <svg
               xmlns='http://www.w3.org/2000/svg'
               viewBox='0 0 24 24'

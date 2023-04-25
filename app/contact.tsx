@@ -15,6 +15,7 @@ export default function Contact() {
         <Title>
           <p className='text-4xl text-white mt-2 mb-1'>Contact me</p>
         </Title>
+        <br />
         <div className='grid grid-cols-7 w-3/5 mx-auto'>
           {/* main section */}
 

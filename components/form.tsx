@@ -25,17 +25,15 @@ export default function Form() {
 
                   <div className='space-y-2'>
                     <label
-                      htmlFor='password'
+                      htmlFor='message'
                       className='text-gray-600 dark:text-gray-300'
                     >
-                      Password
+                      Message
                     </label>
-                    <input
-                      type='password'
-                      name='pwd'
-                      id='pwd'
-                      autoComplete='current-password'
-                      placeholder='mail@your-domain.com'
+                    <textarea
+                      name='message'
+                      id='message'
+                      placeholder='write your message here ...'
                       className='focus:outline-none block w-full rounded-md border border-omega  bg-transparent px-4 py-3 text-gray-600 transition duration-300 invalid:ring-2 invalid:ring-red-400 focus:ring-2 focus:ring-omega'
                     />
                   </div>
