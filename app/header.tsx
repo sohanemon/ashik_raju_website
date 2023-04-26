@@ -12,14 +12,10 @@ import { FiLinkedin, FiFacebook, FiTwitter } from 'react-icons/fi';
 export default function Header() {
   return (
     <section className='my-10'>
-      <motion.div {...slideAnimation('left')}>
-        <BoldText>Hi, its</BoldText>
-      </motion.div>
-      <motion.div {...slideAnimation('right')}>
-        <Title>
-          <p className='text-4xl text-white mt-2 mb-1'>Ashik Raju</p>
-        </Title>
-      </motion.div>
+      <BoldText>Hi, its</BoldText>
+      <Title>
+        <p className='text-4xl text-white mt-2 mb-1'>Ashik Raju</p>
+      </Title>
 
       <motion.p
         {...fadeAnimation}
