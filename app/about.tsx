@@ -10,6 +10,8 @@ import {
   BsPeopleFill,
 } from 'react-icons/bs';
 import { Details } from '@/global';
+import { motion } from 'framer-motion';
+import { slideAnimation } from '@/lib/motion';
 /* --------------------------------------------------------------------- */
 export default function About() {
   return (
@@ -32,15 +34,24 @@ export default function About() {
             </aside>
             {/* #TODO: details section */}
             <aside className='grid grid-cols-3 gap-6 h-max'>
-              {details?.map((e) => (
-                <div
+              {details?.map((e, idx) => (
+                <motion.div
+                  initial={{ x: 100, opacity: 0 }}
+                  whileInView={{
+                    x: 0,
+                    opacity: 1,
+                    transition: {
+                      duration: 0.5 + idx,
+                      type: 'spring',
+                    },
+                  }}
                   key={e.title}
                   className='flex flex-col items-center bg-alpha h-max p-5 rounded-lg shadow shadow-omega h-full'
                 >
                   {e.icon}
                   <p className='text-psi font-semibold text-lg'>{e.title}</p>
                   <p className='text-omega text-xs'>{e.text}</p>
-                </div>
+                </motion.div>
               ))}
               <div className='col-span-full'>
                 <p className='text-alpha mb-6'>
