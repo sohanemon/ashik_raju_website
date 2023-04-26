@@ -26,7 +26,7 @@ export default function About() {
             <aside
               id='image-holder'
               style={{ backgroundImage: 'url("/images/raju_main.png")' }}
-              className='rounded-xl px-6 pt-10 w-60 h-72 bg-cover after:bg-omega after:rounded-xl'
+              className='rounded-xl px-6 pt-10 w-60 h-72 bg-cover after:bg-omega after:rounded-xl relative'
             >
               <div className='absolute bg-gradient-to-tr to-alpha from-alpha inset-0 -z-10 rounded-xl -rotate-12' />
             </aside>
