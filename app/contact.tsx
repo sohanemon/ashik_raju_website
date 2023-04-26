@@ -1,10 +1,12 @@
+'use client';
 import BoldText from '@/components/bold-text';
+import Form from '@/components/form';
 import Title from '@/components/title';
 import { ContactInfo } from '@/global';
-import { MdEmail } from 'react-icons/md';
-import { FaFacebookMessenger } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 import { BsLinkedin } from 'react-icons/bs';
-import Form from '@/components/form';
+import { FaFacebookMessenger } from 'react-icons/fa';
+import { MdEmail } from 'react-icons/md';
 
 export default function Contact() {
   return (
@@ -22,14 +24,27 @@ export default function Contact() {
           <div className='col-span-2 flex flex-col gap-3 w-max '>
             {/* left side div */}
 
-            {contactInfo.map((e) => (
-              <div className='bg-alpha rounded' key={e.link()}>
+            {contactInfo.map((e, idx) => (
+              <motion.div
+                initial={{ x: -100, opacity: 0 }}
+                whileInView={{
+                  x: 0,
+                  opacity: 1,
+                  transition: {
+                    duration: 0.7 + idx,
+                    type: 'spring',
+                    delay: 0.5,
+                  },
+                }}
+                className='bg-alpha rounded'
+                key={e.link()}
+              >
                 <a href={e.link()} className='flex flex-col items-center p-6'>
                   {e.icon('text-3xl')}
                   <p className='font-semibold'>{e.platform}</p>
                   <p className='text-xs mt-1'>{e.handler}</p>
                 </a>
-              </div>
+              </motion.div>
             ))}
           </div>
           <div className='col-span-5'>
