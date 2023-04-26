@@ -11,7 +11,7 @@ import {
 } from 'react-icons/bs';
 import { Details } from '@/global';
 import { motion } from 'framer-motion';
-import { slideAnimation } from '@/lib/motion';
+import { fadeAnimation, slideAnimation } from '@/lib/motion';
 /* --------------------------------------------------------------------- */
 export default function About() {
   return (
@@ -45,6 +45,7 @@ export default function About() {
                       type: 'spring',
                     },
                   }}
+                  viewport={{ once: true }}
                   key={e.title}
                   className='flex flex-col items-center bg-alpha h-max p-5 rounded-lg shadow shadow-omega h-full'
                 >
@@ -54,13 +55,13 @@ export default function About() {
                 </motion.div>
               ))}
               <div className='col-span-full'>
-                <p className='text-alpha mb-6'>
+                <motion.p {...fadeAnimation} className='text-alpha mb-6'>
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio
                   obcaecati neque consectetur, corrupti earum voluptas officiis
                   ullam voluptatibus dolorem odit placeat nulla sapiente
                   assumenda sit exercitationem, molestias aspernatur impedit
                   non.
-                </p>
+                </motion.p>
                 <Button fill>Lets connect</Button>
               </div>
             </aside>{' '}

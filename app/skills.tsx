@@ -2,6 +2,8 @@
 import BoldText from '@/components/bold-text';
 import Title from '@/components/title';
 import { SkillSet } from '@/global';
+import { slideAnimation } from '@/lib/motion';
+import { motion } from 'framer-motion';
 import { SiBlueprint } from 'react-icons/si';
 
 export default function Skills() {
@@ -16,7 +18,10 @@ export default function Skills() {
 
         <section>
           {/* #note: skills container */}
-          <div className='grid grid-cols-2 w-4/5 mx-auto gap-10 mt-10'>
+          <motion.div
+            {...slideAnimation('up')}
+            className='grid grid-cols-2 w-4/5 mx-auto gap-10 mt-10'
+          >
             {skills?.map((e) => (
               <div key={e.title} className='bg-omega p-7  rounded-3xl'>
                 <h1 className='text-xl text-psi text-center mb-4 '>
@@ -37,7 +42,7 @@ export default function Skills() {
                 </div>
               </div>
             ))}
-          </div>
+          </motion.div>
         </section>
       </div>
     </>
