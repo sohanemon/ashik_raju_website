@@ -1,3 +1,4 @@
+'use client';
 import BoldText from '@/components/bold-text';
 import Title from '@/components/title';
 import { SkillSet } from '@/global';
