@@ -8,8 +8,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        alpha: '#66a6ff',
-        beta: '#4dc7d9',
+        alpha: '#D6EFED',
+        beta: '#B7D3DF',
         gamma: '#C9BBCF',
         psi: '#191A16',
         omega: '#898AA6',
