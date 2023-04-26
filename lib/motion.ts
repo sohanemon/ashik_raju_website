@@ -1,3 +1,5 @@
+import { exit } from 'process';
+
 export const transition = { type: 'spring', duration: 0.8 };
 
 export const slideAnimation = (
@@ -32,10 +34,11 @@ export const fadeAnimation = {
     opacity: 0,
     transition: { ...transition, delay: 1 },
   },
-  animate: {
+  whileInView: {
     opacity: 1,
-    transition: { ...transition, delay: 0 },
+    transition: { ...transition, delay: 0.1 },
   },
+  viewport: { once: true },
   exit: {
     opacity: 0,
     transition: { ...transition, delay: 0 },

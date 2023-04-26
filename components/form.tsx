@@ -1,8 +1,10 @@
+import { motion } from 'framer-motion';
 import UiBtn from './ui/ui-btn';
+import { fadeAnimation } from '@/lib/motion';
 
 export default function Form() {
   return (
-    <section className='w-full '>
+    <motion.section {...fadeAnimation} className='w-full '>
       <div className='relative '>
         <div className='relative  text-gray-500 '>
           <div className='m-auto space-y-8 '>
@@ -45,6 +47,6 @@ export default function Form() {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

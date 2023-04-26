@@ -36,6 +36,7 @@ export default function Contact() {
                     delay: 0.5,
                   },
                 }}
+                viewport={{ once: true }}
                 className='bg-alpha rounded'
                 key={e.link()}
               >
@@ -76,7 +77,7 @@ const contactInfo: ContactInfo[] = [
   },
   {
     icon: (className) => <BsLinkedin className={className} />,
-    platform: 'LinkedIN',
+    platform: 'LinkedIn',
     handler: 'raju@gmail.com',
     link: function () {
       return `mailto://${this.handler}`;
